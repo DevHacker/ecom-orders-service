@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: orders-management-service
+
+  profiles:
+    active: dev
+
+  config:
+    import: configserver:http://localhost:9000?fail-fast=true&max-attempts=10&max-interval=1500&multiplier=12&initial-interval=1100
+
